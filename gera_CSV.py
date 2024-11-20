@@ -1,6 +1,6 @@
 import csv
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 import uuid
 
 
@@ -23,34 +23,35 @@ def gera_csv(arquivo_csv, produtos_categorias_quantidade, total_itens):
             categoria = produtos_categorias_quantidade[produto]["categoria"]
 
 
-            #Como os preços variam de acordo com o tempo do ano, foi decidido fazer com que os
-            #preços respeitem um intervalo de limites
-            if isinstance(produtos_categorias_precos[produto]["preco"], tuple):
-                preco = random.randint(*produtos_categorias_precos[produto]["preco"])
-            else:
-                preco = produtos_categorias_precos[produto]["preco"]
+            preco = produtos_categorias_precos[produto]["preco"]
 
             #* descompacta os valores para poderem ser utilizados
             quantidade = random.randint(*faixa_quantidade)
+
             data = data_inicial + timedelta(days=random.randint(0, (data_final - data_inicial).days))
 
-            csv_output.writerow([ID, produto, categoria, preco, quantidade, data.strftime("%d/%m/%Y")])
+            #Como a loja só fica aberta das 8:00h até as 20:00h é importante que os horários
+            #não passem disso
+            hora = random.randint(8, 19)
+            minuto = random.randint(0, 59)
+            data_hora = data.replace(hour=hora, minute=minuto)
 
+            csv_output.writerow([ID, produto, categoria, preco, quantidade, data_hora.strftime("%d/%m/%Y %H:%M")])
 
 #Isso é base de todos os produtos, onde um produto está relacionado a uma
 # categoria e a um preço
 Produto_Categoria_Quantidade = produtos_categorias_precos = {
-        "Samsung Galaxy S23": {"categoria": "Smartphones", "preco": (4000, 4500)},
-        "iPhone 14 Pro": {"categoria": "Smartphones", "preco": (7000, 8000)},
-        "Notebook Dell": {"categoria": "Laptops", "preco": (4000, 5000)},
-        "MacBook Air": {"categoria": "Laptops", "preco": (10000, 12000)},
-        "Fone de Ouvido JBL": {"categoria": "Áudio", "preco": (300, 400)},
-        "Teclado Mecânico Razer": {"categoria": "Acessórios", "preco": (500, 700)},
-        "Mouse Razer": {"categoria": "Acessórios", "preco": (400, 500)},
-        "Smart TV LG 4K 55''": {"categoria": "Eletrônicos", "preco": (2500, 3000)},
-        "Caixa de Som JBL": {"categoria": "Áudio", "preco": (1500, 2000)},
-        "Câmera Sony": {"categoria": "Fotografia", "preco": (6000, 6800)},
-        "Câmera Canon": {"categoria": "Fotografia", "preco": (8000, 9000)}
+        "Samsung Galaxy S23": {"categoria": "Smartphones", "preco": 4000,},
+        "iPhone 14 Pro": {"categoria": "Smartphones", "preco": 8000},
+        "Notebook Dell": {"categoria": "Laptops", "preco": 5000},
+        "MacBook Air": {"categoria": "Laptops", "preco": 12000},
+        "Fone de Ouvido JBL": {"categoria": "Áudio", "preco": 400},
+        "Teclado Mecânico Razer": {"categoria": "Acessórios", "preco": 700},
+        "Mouse Razer": {"categoria": "Acessórios", "preco": 500},
+        "Smart TV LG 4K 55''": {"categoria": "Eletrônicos", "preco": 3000},
+        "Caixa de Som JBL": {"categoria": "Áudio", "preco": 2000},
+        "Câmera Sony": {"categoria": "Fotografia", "preco": 7000},
+        "Câmera Canon": {"categoria": "Fotografia", "preco": 9000}
 }
 
 gera_csv("data-sets/data_raw.csv", Produto_Categoria_Quantidade, 10000)
