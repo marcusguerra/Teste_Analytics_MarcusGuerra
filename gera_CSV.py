@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import uuid
 
 
-def gera_csv(arquivo_csv, produtos_categorias_quantidade, totalItens):
+def gera_csv(arquivo_csv, produtos_categorias_quantidade, total_itens):
 
     #número máximo de itens é 20
     faixa_quantidade = (1, 20)
@@ -16,7 +16,7 @@ def gera_csv(arquivo_csv, produtos_categorias_quantidade, totalItens):
         csv_output = csv.writer(arquivo)
         csv_output.writerow(["ID", "Produto", "Categoria", "Preço", "Quantidade", "Data"])
 
-        for i in range(1, totalItens):
+        for i in range(1, total_itens):
             #Gera um ID aleatorio para a chave principal
             ID = str(uuid.uuid4())
             produto = random.choice(list(produtos_categorias_quantidade.keys()))
@@ -40,17 +40,17 @@ def gera_csv(arquivo_csv, produtos_categorias_quantidade, totalItens):
 #Isso é base de todos os produtos, onde um produto está relacionado a uma
 # categoria e a um preço
 Produto_Categoria_Quantidade = produtos_categorias_precos = {
-        "Samsung Galaxy S23": {"categoria": "Smartphones", "preco": (4000, 5000)},
-        "iPhone 14 Pro": {"categoria": "Smartphones", "preco": (7000, 9000)},
-        "Notebook Dell": {"categoria": "Laptops", "preco": (3000, 6000)},
-        "MacBook Air": {"categoria": "Laptops", "preco": (8000, 12000)},
-        "Fone de Ouvido JBL": {"categoria": "Áudio", "preco": (200, 400)},
-        "Teclado Mecânico Razer": {"categoria": "Acessórios", "preco": (500, 1000)},
-        "Mouse Razer": {"categoria": "Acessórios", "preco": (200, 500)},
-        "Smart TV LG 4K 55''": {"categoria": "Eletrônicos", "preco": (2500, 4000)},
+        "Samsung Galaxy S23": {"categoria": "Smartphones", "preco": (4000, 4500)},
+        "iPhone 14 Pro": {"categoria": "Smartphones", "preco": (7000, 8000)},
+        "Notebook Dell": {"categoria": "Laptops", "preco": (4000, 5000)},
+        "MacBook Air": {"categoria": "Laptops", "preco": (10000, 12000)},
+        "Fone de Ouvido JBL": {"categoria": "Áudio", "preco": (300, 400)},
+        "Teclado Mecânico Razer": {"categoria": "Acessórios", "preco": (500, 700)},
+        "Mouse Razer": {"categoria": "Acessórios", "preco": (400, 500)},
+        "Smart TV LG 4K 55''": {"categoria": "Eletrônicos", "preco": (2500, 3000)},
         "Caixa de Som JBL": {"categoria": "Áudio", "preco": (1500, 2000)},
-        "Câmera Sony": {"categoria": "Fotografia", "preco": (8000, 9000)},
-        "Câmera Canon": {"categoria": "Fotografia", "preco": (8000, 7000)}
+        "Câmera Sony": {"categoria": "Fotografia", "preco": (6000, 6800)},
+        "Câmera Canon": {"categoria": "Fotografia", "preco": (8000, 9000)}
 }
 
-gera_csv("produtos_precos_fixos.csv", Produto_Categoria_Quantidade, 20)
+gera_csv("data-sets/data_raw.csv", Produto_Categoria_Quantidade, 10000)
