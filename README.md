@@ -48,7 +48,7 @@ Os produtos disponíveis são os seguintes:
 | Fone de Ouvido JBL      | Áudio          | 400    |
 | Teclado Mecânico Razer  | Acessórios     | 700    |
 | Mouse Razer             | Acessórios     | 500    |
-| Smart TV LG 4K 55''     | Eletrônicos    | 3000   |
+| Smart TV LG 4K 55     | Eletrônicos    | 3000   |
 | Caixa de Som JBL        | Áudio          | 2000   |
 | Câmera Sony             | Fotografia     | 7000   |
 | Câmera Canon            | Fotografia     | 9000   |
