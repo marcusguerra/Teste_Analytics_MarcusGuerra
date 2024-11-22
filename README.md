@@ -11,7 +11,7 @@ Este repositório contém um conjunto de scripts e notebooks voltados para anál
 
 ## Suposições
 
-A primeira etapa de qualquer projeto envolvendo um conjunto de dados é entender esse conjunto, para isso é importante contactar o cliente e esclarecer quaisquer dúvidas pertinentes pois uma coluna mal interpretada irá gerar problemas no futuro.
+A primeira etapa de qualquer projeto envolvendo um conjunto de dados é entender esse conjunto, para isso é importante contactar o cliente e esclarecer quaisquer dúvidas pertinentes pois uma coluna mal interpretada pode gerar problemas no futuro.
 Neste caso, como fui eu quem criou o dataset, presumi que estava atuando como o cliente.
 
 Sobre a qualidade dos dados, como é possivel observar na seção abaixo, os dados foram gerados aleatoriamente, a qualidade deles tende a ser inferior, o que atrapalha as analises, pois
