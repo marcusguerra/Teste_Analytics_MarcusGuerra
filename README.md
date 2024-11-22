@@ -12,10 +12,10 @@ Este repositório contém um conjunto de scripts e notebooks voltados para anál
 ##Suposições
 
 A primeira etapa de qualquer projeto envolvendo um conjunto de dados é entender esse conjunto, para isso é importante contactar o cliente e esclarecer quaisquer dúvidas pertinentes pois uma coluna mal interpretada irá gerar problemas no futuro.
-Como neste caso quem criou o data-set fui eu, eu supus que eu era o cliente.
+Neste caso, como fui eu quem criou o dataset, presumi que estava atuando como o cliente.
 
-Sobre a qualidade dos dados, como é possivel observar na seção abaixo, os dados foram gerados aleatoriamente, a qualidade deles tende a ser ruim, o que atrapalha as analises, pois
-dados de baixa qualidade leva a resultados imprecisos e conclusões equivocadas, comprometendo a confiabilidade das análises e decisões baseadas neles. Contudo, ainda foi possivel tirar insights interessantes. 
+Sobre a qualidade dos dados, como é possivel observar na seção abaixo, os dados foram gerados aleatoriamente, a qualidade deles tende a ser inferior, o que atrapalha as analises, pois
+dados de baixa qualidade leva a resultados imprecisos e conclusões equivocadas, comprometendo a confiabilidade das análises e decisões baseadas neles. Contudo, ainda foi possivel tirar insights interessantes como observado no pdf. 
 
 Outra suposição importante feita durante a limpeza dos dados foi que, se uma entrada no arquivo CSV possui todos os campos idênticos, exceto o UUID, ela é considerada uma duplicata e, portanto, deve ser removida.
 
@@ -23,9 +23,9 @@ Outra suposição importante feita durante a limpeza dos dados foi que, se uma e
 
 Para esse projeto foram criados 2 notebook para manter uma melhor organização dos dados. 
 
-O primeiro **`notebooks/1 - Limpeza e Análise de Dados de Vendas.ipynb`**, foca na primeira parte do desafio, onde ele realiza uma limpeza no conjunto de dados e também cria a coluna Vendas que será utilizada posteriormente, gerando o arquivo **`data-sets/data_clean.csv`**.
+O primeiro `notebooks/1 - Limpeza e Análise de Dados de Vendas.ipynb`, foca na primeira parte do desafio, onde ele realiza uma limpeza no conjunto de dados e também cria a coluna Vendas que será utilizada posteriormente, gerando o arquivo `data-sets/data_clean.csv`.
 
-O segundo **`notebooks/2. Análise Exploratória de Dados de Vendas.ipynb`**, foca na análise dos dados, onde para uma melhor organização, visualização e reaproveitamento de código. Foi decidido criar uma seção para as funções que geram os gráficos.
+O segundo `notebooks/2. Análise Exploratória de Dados de Vendas.ipynb`, foca na análise dos dados, onde para uma melhor organização, visualização e reaproveitamento de código. Foi decidido criar uma seção para as funções que geram os gráficos.
 
 ## Criação do Conjunto de Dados
 
