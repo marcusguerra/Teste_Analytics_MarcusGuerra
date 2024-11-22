@@ -9,7 +9,7 @@ Este repositório contém um conjunto de scripts e notebooks voltados para anál
 - **`sql/`**: Scripts SQL para consulta e manipulação dos dados.
 - **`gera_CSV.py`**: Script Python que gera o CSV utilizado durante o projeto.
 
-##Suposições
+## Suposições
 
 A primeira etapa de qualquer projeto envolvendo um conjunto de dados é entender esse conjunto, para isso é importante contactar o cliente e esclarecer quaisquer dúvidas pertinentes pois uma coluna mal interpretada irá gerar problemas no futuro.
 Neste caso, como fui eu quem criou o dataset, presumi que estava atuando como o cliente.
