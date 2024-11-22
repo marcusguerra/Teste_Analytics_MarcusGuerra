@@ -48,7 +48,7 @@ Produto_Categoria_Quantidade = produtos_categorias_precos = {
         "Fone de Ouvido JBL": {"categoria": "Áudio", "preco": 400},
         "Teclado Mecânico Razer": {"categoria": "Acessórios", "preco": 700},
         "Mouse Razer": {"categoria": "Acessórios", "preco": 500},
-        "Smart TV LG 4K 55''": {"categoria": "Eletrônicos", "preco": 3000},
+        "Smart TV LG 4K 55": {"categoria": "Eletrônicos", "preco": 3000},
         "Caixa de Som JBL": {"categoria": "Áudio", "preco": 2000},
         "Câmera Sony": {"categoria": "Fotografia", "preco": 7000},
         "Câmera Canon": {"categoria": "Fotografia", "preco": 9000}
