@@ -48,13 +48,20 @@ Os produtos disponíveis são os seguintes:
 | Fone de Ouvido JBL      | Áudio          | 400    |
 | Teclado Mecânico Razer  | Acessórios     | 700    |
 | Mouse Razer             | Acessórios     | 500    |
-| Smart TV LG 4K 55     | Eletrônicos    | 3000   |
+| Smart TV LG 4K 55       | Eletrônicos    | 3000   |
 | Caixa de Som JBL        | Áudio          | 2000   |
 | Câmera Sony             | Fotografia     | 7000   |
 | Câmera Canon            | Fotografia     | 9000   |
 
 Para gerar o CSV, configure os parâmetros `produtos_categorias_quantidade` e `total_itens` no script, e execute-o.
 
+## Execução
+
+Para a execução, primeiramente é importante lembrar de não executar o arquivo `gera_CSV.py` novamente, pois irá criar um csv novo e alterar todos os notebooks.
+
+Também é imporante alterar os caminhos para a leitura e escrita do csv caso for executar o código novamente, todas as células onde esta ação deve ser realizada estão marcadas com o comentário #Mudar caminho absoluto.
+
+A escolha de fazer referência ao caminho absoluto da máquina local, em vez de usar o link do GitHub, foi por dois motivos: primeiro, como o arquivo CSV precisa ser escrito, não é possível utilizar o caminho do GitHub e misturar caminhos do GitHub com da maquina pode gerar confusão; segundo, para evitar problemas relacionados à conexão de internet, é mais seguro usar o caminho local. No entanto, em projetos maiores, com várias pessoas acessando o sistema simultaneamente, essa abordagem não é recomendada.
 
 ## Pré-requisitos
 
